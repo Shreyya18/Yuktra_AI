@@ -1,36 +1,152 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🤖 Yuktra AI Chatbot  
+Website is live here -> https://yuktra-ai.vercel.app/ 
 
-## Getting Started
+An intelligent conversational AI chatbot powered by Google's Gemini API, built with Next.js and React.
 
-First, run the development server:
+![Next.js](https://img.shields.io/badge/Next.js-14-black?style=flat-square&logo=next.js)
+![React](https://img.shields.io/badge/React-18-blue?style=flat-square&logo=react)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.0-38B2AC?style=flat-square&logo=tailwind-css)
+![Gemini API](https://img.shields.io/badge/Gemini-API-4285F4?style=flat-square&logo=google)
+
+## ✨ Features
+
+- 💬 **Real-time AI Conversations** - Instant responses powered by Google Gemini 2.0
+- 🎨 **Modern UI/UX** - Clean, gradient-based design with smooth animations
+- 🔒 **Secure API Integration** - Backend API routes protect your API keys
+- 📱 **Responsive Design** - Works seamlessly on desktop, tablet, and mobile
+- ⚡ **Fast Performance** - Built with Next.js App Router for optimal speed
+- 🗑️ **Chat Management** - Clear chat history with one click
+- 💡 **Quick Prompts** - Suggested questions to get started
+- ⌨️ **Keyboard Shortcuts** - Press Enter to send messages
+
+## 🛠️ Tech Stack
+
+- **Framework**: Next.js 14 (App Router)
+- **Frontend**: React 18 with Hooks
+- **Styling**: Tailwind CSS
+- **AI Model**: Google Gemini 2.0 Flash
+- **API**: RESTful API with Next.js Route Handlers
+- **Language**: JavaScript (ES6+)
+
+## 📋 Prerequisites
+
+Before you begin, ensure you have the following installed:
+- Node.js (v18.0 or higher)
+- npm or yarn
+- A Google account for Gemini API access
+
+## 🚀 Getting Started
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/yourusername/yuktra.git
+cd yuktra
+```
+
+### 2. Install dependencies
+
+```bash
+npm install
+```
+
+### 3. Get your Gemini API Key
+
+1. Visit [Google AI Studio](https://aistudio.google.com/app/apikey)
+2. Sign in with your Google account
+3. Click "Create API Key"
+4. Copy your API key
+
+### 4. Set up environment variables
+
+Create a `.env.local` file in the root directory:
+
+```env
+GEMINI_API_KEY=your_api_key_here
+```
+
+⚠️ **Important**: Never commit your `.env.local` file to version control!
+
+### 5. Run the development server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser to see Yuktra in action!
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## 📁 Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+yuktra/
+├── app/
+│   ├── api/
+│   │   └── chat/
+│   │       └── route.js          # Backend API endpoint
+│   ├── page.js                    # Main chatbot UI
+│   ├── layout.js                  # Root layout
+│   └── globals.css                # Global styles
+├── public/                        # Static assets
+├── .env.local                     # Environment variables (not in repo)
+├── next.config.js                 # Next.js configuration
+├── tailwind.config.js             # Tailwind CSS configuration
+├── package.json                   # Dependencies
+└── README.md                      # Project documentation
+```
 
-## Learn More
+## 🎯 Key Components
 
-To learn more about Next.js, take a look at the following resources:
+### Frontend (`app/page.js`)
+- Manages chat state and user interactions
+- Handles message sending and receiving
+- Renders chat interface with messages
+- Implements loading states and error handling
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Backend API (`app/api/chat/route.js`)
+- Securely stores and uses Gemini API key
+- Processes incoming messages
+- Communicates with Gemini API
+- Returns AI-generated responses
+- Handles errors gracefully
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🔧 Configuration
 
-## Deploy on Vercel
+### Changing the AI Model
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Edit `app/api/chat/route.js` to use a different Gemini model:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```javascript
+// Current model
+gemini-2.0-flash
+
+// Other available models
+gemini-1.5-pro
+gemini-1.5-flash
+```
+
+### Customizing the UI
+
+Colors and styling can be modified in:
+- `app/page.js` - Tailwind classes
+- `tailwind.config.js` - Theme configuration
+- `app/globals.css` - Global CSS variables
+
+
+
+
+
+
+
+## 📈 Future Enhancements
+
+- [ ] Chat history persistence with database
+- [ ] User authentication and profiles
+- [ ] Multiple chat sessions
+- [ ] Markdown rendering for bot responses
+- [ ] Code syntax highlighting
+- [ ] Image upload support (Gemini Vision)
+- [ ] Voice input/output
+- [ ] Dark mode toggle
+- [ ] Export chat functionality
+- [ ] Rate limiting for API calls
+

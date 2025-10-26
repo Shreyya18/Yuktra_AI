@@ -174,7 +174,7 @@ export default function Yuktra() {
               onChange={(e) => setInput(e.target.value)}
               onKeyPress={handleKeyPress}
               placeholder="Type your message..."
-              className="flex-1 px-5 py-3 border-2 border-gray-300 rounded-full focus:outline-none focus:border-indigo-500 transition-colors"
+              className="text-black flex-1 px-5 py-3 border-2 border-gray-300 rounded-full focus:outline-none focus:border-indigo-500 transition-colors"
               disabled={loading}
             />
             <button
